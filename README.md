@@ -51,4 +51,36 @@ This project demonstrates the **Fibonacci sequence generation** using a **microc
 
 ---
 
-This **README** is **structured, informative, and optimized** for **GitHub**, making it easy for others to understand and use your project. Let me know if you need any changes! 🚀
+This **README** is **structured, informative, and optimized** for **GitHub**, making it easy for others to understand and use your project. Let me know if you need any changes! 🚀   
+// code ORG 0000H
+
+MOV R0, #30H      ; pointer to memory location
+MOV A, #00H       ; first number = 0
+MOV @R0, A        ; store 0
+
+INC R0            ; move to next location
+MOV A, #01H       ; second number = 1
+MOV @R0, A        ; store 1
+
+MOV R2, #08       ; number of terms (change as needed)
+
+LOOP:
+    MOV A, @R0        ; get last number
+    MOV R3, A         ; store in R3
+
+    DEC R0            ; go to previous number
+    MOV A, @R0        ; get previous number
+
+    ADD A, R3         ; A = prev + last
+
+    INC R0            ; go back to current position
+    INC R0            ; move to next position
+
+    MOV @R0, A        ; store new Fibonacci number
+
+    DJNZ R2, LOOP     ; repeat
+
+HERE: SJMP HERE       ; stop program
+
+END
+
