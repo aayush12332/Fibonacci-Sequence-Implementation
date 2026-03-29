@@ -32,7 +32,7 @@ This project demonstrates the **Fibonacci sequence generation** using a **microc
 ## 🛠 **Installation & Simulation Guide**  
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/Aneket-Burman/Fibonacci-Proteus.git
+   git clone https://github.com/Aayush-Patidar/Fibonacci-Proteus.git
    cd Fibonacci-Proteus
    ```
 2. **Open the Proteus file**  
